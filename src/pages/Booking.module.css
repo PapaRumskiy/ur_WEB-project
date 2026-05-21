@@ -1,0 +1,226 @@
+.page {
+  display: grid;
+  gap: 28px;
+}
+
+.headerBlock {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.backLink {
+  color: var(--primary);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: #60a5fa;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: var(--text);
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 760px;
+}
+
+.trainCardSummary,
+.seatSection,
+.ticketCard,
+.selectorBlock {
+  background: rgba(26, 31, 46, 0.5);
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(10px);
+}
+
+.trainCardSummary {
+  display: grid;
+  gap: 16px;
+  align-self: start;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.04) 100%);
+}
+
+.trainInfoLabel {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.trainInfoValue {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.contentGrid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 1fr);
+}
+
+.bookingPanel {
+  display: grid;
+  gap: 24px;
+}
+
+.sectionTitle {
+  margin: 0 0 18px;
+  font-size: 1.25rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.seatSection {
+  display: grid;
+  gap: 18px;
+}
+
+.legendRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.legendMarkFree,
+.legendMarkSelected,
+.legendMarkBooked {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.legendMarkFree {
+  background: var(--success);
+}
+
+.legendMarkSelected {
+  background: var(--primary);
+}
+
+.legendMarkBooked {
+  background: var(--danger);
+}
+
+.formPanel {
+  display: grid;
+  gap: 22px;
+  justify-items: center;
+}
+
+.ticketCard {
+  width: 100%;
+}
+
+.ticketInfo {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: var(--text-muted);
+}
+
+.ticketInfo p {
+  margin: 0;
+  color: var(--text);
+}
+
+.errorMessage {
+  margin-bottom: 18px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  font-size: 0.95rem;
+}
+
+.notFound {
+  padding: 40px;
+  text-align: center;
+  background: rgba(26, 31, 46, 0.4);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.notFound h2 {
+  margin-top: 0;
+  color: var(--text);
+}
+
+.notFound p {
+  color: var(--text-muted);
+}
+
+.backButton {
+  margin-top: 20px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.backButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.3);
+}
+
+@media (max-width: 1040px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    gap: 24px;
+  }
+
+  .headerTop {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .trainCardSummary {
+    padding: 24px;
+  }
+}
